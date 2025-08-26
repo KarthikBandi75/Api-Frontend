@@ -16,7 +16,7 @@ const SearchForm = () => {
     setError('');
 
     try {
-      await axios.post('http://localhost:5000/api/search', { keyword });
+      await axios.post('https://api-backend-0bi4.onrender.com/api/search', { keyword });
       navigate('/dashboard');
     } catch (err) {
       setError(err.response?.data?.error || 'Failed to search');
